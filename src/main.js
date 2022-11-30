@@ -1,6 +1,6 @@
 
 import data from './data/pokemon/pokemon.js';
-import {  } from './data.js';
+import { filtrarTipoPokemones } from './data.js';
 import pokemon from './data/pokemon/pokemon.js';
 
 
@@ -68,13 +68,51 @@ const mostrar = (pokemones)=>{
                                    <button id="btnStats" class="bntS"> Stats </button>
                                    <button id="btnResistencia" class="btnR">Characteristics</button>
                                  </div>
-                                                      
+                                                    
                                  </div>  `                        
-     
-    
+        
     });
 } 
  mostrar(pokemon.pokemon);
  // Filtrar por tipo:
- addEventListener
 
+ //se crea un evento para seleccionar el pokemon que queremos filtrar por tipo //
+document.getElementById("tipoPokemon").addEventListener("change", () => {
+  // se crea la variable para guardar la selección del usuario (filtro tipo)//
+  let selecccionPokemones = document.getElementById("tipoPokemon").value;
+  // se crea la condicional de: si no se selecciona ninguna opción va a mostrar todos los pokemones//
+  if (!selecccionPokemones) {
+    (pokemon.pokemon);
+  } else {
+   (filtrarTipoPokemones(pokemon.pokemon, selecccionPokemones));
+  }
+});
+
+let seleccionTipoPokemones = document.getElementById("filtrosTipo");
+// se crea el select para las opciones de filtrado tipo de pokemon//
+let opcionesTipoPokemones = `
+<div  class="opcionesFiltros" >
+        <h3>Type</h3>
+        <select  id="tipoPokemon" placeholder="type">
+          <option value="bug">Bug</option>
+          <option value="dark" selected>Dark</option>
+          <option value="dragon">Dragon</option>
+          <option value="electric">Electric</option>
+          <option value="fighting">Fighting</option>
+          <option value="flying">Flying</option>
+          <option value="ghost">Ghost</option>
+          <option value="grass">Grass</option>
+          <option value="ground">Ground</option>
+          <option value="ice">Ice</option>
+          <option value="normal">Normal</option>
+          <option value="poison">Poison</option>
+          <option value="psychic">Psychic</option>
+          <option value="rock">Rock</option>
+          <option value="steel">Steel</option>
+          <option value="water">Water</option>
+        </select>
+
+      </div>
+`;
+seleccionTipoPokemones.innerHTML = opcionesTipoPokemones;
+ 
