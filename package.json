@@ -25,6 +25,19 @@
   },
   "engines": {
     "node": ">=14.x"
-  }
+  },
+  "description": "* [1. Definición del producto](#1-definición-del-producto)\r * [2. Principales usuarios](#2-princiaples-usuarios)\r * [3. Objetivos del usuario en relación al producto](#3-objetivos-producto)\r * [4. Ventajas para el usuario](#4-ventajas-usuario)\r * [5. Prototipo](#5-prototipo)",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErikaSuesca/DEV002-data-lovers.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/ErikaSuesca/DEV002-data-lovers/issues"
+  },
+  "homepage": "https://github.com/ErikaSuesca/DEV002-data-lovers#readme"
 }
-
